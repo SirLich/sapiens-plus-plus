@@ -6,11 +6,22 @@ local mod = {
 local typeMaps = mjrequire "common/typeMaps"
 
 function mod:onload(resource)
-	resource:addResource('palmLeaf', {
-		name ="Palm Leaf",
-		plural = "Palm Leaves",
-		displayGameObjectTypeIndex = typeMaps.types.gameObject.palmLeaf,
-	})
+	mj:log("S++: Adding Palm Leaf Resource.")
+
+	local super_mjInit = resource.mjInit
+
+	resource.mjInit = function(self)
+		super_mjInit()
+
+		resource:addResource('palmLeaf', {
+
+			-- TODO: Can these somehow be infered?
+			name ="Palm Leaf",
+			plural = "Palm Leaves",
+			displayGameObjectTypeIndex = typeMaps.types.gameObject.palmLeaf,
+		})
+
+	end
 end
 
 return mod

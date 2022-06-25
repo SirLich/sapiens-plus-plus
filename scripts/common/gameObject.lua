@@ -8,16 +8,16 @@ local resource = mjrequire "common/resource"
 -- Math
 local mjm = mjrequire "common/mjm"
 local vec3 = mjm.vec3
-local vec3xMat3 = mjm.vec3xMat3
 local mat3Identity = mjm.mat3Identity
 local mat3Rotate = mjm.mat3Rotate
-local mat3Inverse = mjm.mat3Inverse
 
 function mod:onload(gameObject)
-	mj:log("SPP: Adding Game Object")
+	mj:log("S++: Adding Palm Leaf Game Object")
 
 	gameObject:addGameObject("palmLeaf", {
 		modelName = "palmLeaf",
+		name = "Palm Leaf",
+		plural = "Palm Leaves",
 		scale = 1.0,
 		hasPhysics = true,
 		resourceTypeIndex = resource.types.palmLeaf.index,

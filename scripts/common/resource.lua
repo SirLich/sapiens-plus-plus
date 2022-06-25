@@ -13,12 +13,12 @@ function mod:onload(resource)
 	resource.mjInit = function(self)
 		super_mjInit()
 
-		resource:addResource('palmLeaf', {
+		resource:addResource('palmFrond', {
 
 			-- TODO: Can these somehow be infered?
 			name ="Palm Leaf",
 			plural = "Palm Leaves",
-			displayGameObjectTypeIndex = typeMaps.types.gameObject.palmLeaf,
+			displayGameObjectTypeIndex = typeMaps.types.gameObject.palmFrond,
 		})
 
 	end

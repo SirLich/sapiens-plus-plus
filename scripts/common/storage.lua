@@ -16,11 +16,11 @@ local mat3Identity = mjm.mat3Identity
 function mod:onload(storage)
     mj:log("S++: Adding Palm Leaf to Storage!")
 
-	storage:addStorage('palmLeaf', {
+	storage:addStorage('palmFrond', {
         name = "Pealm Leaves",
-        displayGameObjectTypeIndex =  typeMaps.types.gameObject.palmLeaf,
+        displayGameObjectTypeIndex =  typeMaps.types.gameObject.palmFrond,
         resources = {
-            resource.types.palmLeaf.index,
+            resource.types.palmFrond.index,
         },
         storageBox = {
             size =  vec3(0.1, 0.1, 0.1),

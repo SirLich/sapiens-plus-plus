@@ -15,7 +15,7 @@ function mod:onload(resource)
 
 		resource:addResource('palmFrond', {
 
-			-- TODO: Can these somehow be infered?
+			-- TODO: Can the language stuff somehow be infered?
 			name ="Palm Leaf",
 			plural = "Palm Leaves",
 			displayGameObjectTypeIndex = typeMaps.types.gameObject.palmFrond,

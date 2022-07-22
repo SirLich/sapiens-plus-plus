@@ -1,5 +1,6 @@
+--- Sapiens++: sapiensPlusPlus.lua
 --- Mod entry point for the Sapiens++ Mod.
--- @author SirLich
+--- @author SirLich
 
 local sapiensPlusPlus = {}
 
@@ -8,7 +9,6 @@ local keyCodes = mjrequire "mainThread/keyMapping".keyCodes
 local timer = mjrequire "common/timer"
 
 -- Hammerstone
-local localeManager = mjrequire "hammerstone/locale/localeManager"
 local inputManager = mjrequire "hammerstone/input/inputManager"
 local uiManager = mjrequire "hammerstone/ui/uiManager"
 local saveState = mjrequire "hammerstone/state/saveState"

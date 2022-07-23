@@ -3,12 +3,23 @@
 
 local mod = {
 	loadOrder = 1,
+	serverWorld = nil
 }
 
--- Hammerstone
-local logger = mjrequire "hammerstone/logging"
+-- Base
+local serverMob = mjrequire "server/objects/serverMob"
+
+-- Sapiens++
+local serverDodo = mjrequire "sapiens-pp/dodo/serverDodo"
 
 function mod:onload(serverGOM)
+	local super_setWorld = serverGOM.setWorld
+	serverGOM.setWorld = function (self_, serverWorld, serverTribe)
+		super_setWorld(serverGOM, serverWorld, serverTribe)
+		mod.serverWorld = serverWorld
+	end
+
+
 	local super_setBridge = serverGOM.setBridge
 
 	serverGOM.setBridge = function (self_, bridge)
@@ -16,7 +27,10 @@ function mod:onload(serverGOM)
 		serverGOM.bridge = bridge
 
 		-- Custom implementation
-		serverGOM:createObjectSet("dodo")
+		mj:log("S++: Creating ObjectSet 'dodos'")
+
+		serverGOM:createObjectSet("dodos")
+		serverDodo:init(serverGOM, mod.serverWorld, serverMob)
 	end
 
 	function serverGOM:createObjectSet(objectSetID)

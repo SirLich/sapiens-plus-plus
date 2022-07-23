@@ -12,7 +12,9 @@ local mob = mjrequire "common/mob/mob"
 local clientDodo = mjrequire "sapiens-pp/dodo/clientDodo"
 
 function mod:onload(clientMob)
-	clientMob.mobClassMap[mob.types.chicken.index] = clientDodo
+	mj:log("S++: Added clientDodo to mobClassMap")
+	clientMob.mobClassMap[mob.types.dodo.index] = clientDodo
+	mj:log(clientMob.mobClassMap)
 end
 
 return mod

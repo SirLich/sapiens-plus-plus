@@ -1,20 +1,15 @@
 --- Sapiens++: mobDodo.lua
 --- @author SirLich
 
--- Module setup
 local mobDodo = {}
 
 -- Base
 local animationGroups = mjrequire "common/animations/animationGroups"
 
--- Hammerstone
-local logger = mjrequire "hammerstone/logging"
-
 -- Math
 local mjm = mjrequire "common/mjm"
 local vec3 = mjm.vec3
 
--- Currently a copy of the mobChicken
 function mobDodo:load(mob, gameObject)
     mob:addType("dodo", {
         

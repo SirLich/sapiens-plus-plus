@@ -1,6 +1,7 @@
--- Module Setup
-local clientDodo = {}
+--- Sapiens++: clientDodo.lua
+--- @author SirLich
 
+local clientDodo = {}
 
 clientDodo.serverUpdate = function(object, notifications, pos, rotation, scale, incomingServerStateDelta)
 end
@@ -13,7 +14,7 @@ end
 
 
 function clientDodo:init(clientGOM_)
+	mj:log("S++: clientDodo:init called.")
 end
 
--- Module Return
 return clientDodo
